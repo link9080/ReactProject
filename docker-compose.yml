@@ -51,7 +51,7 @@ services:
     volumes:
       - ./react:/app
     working_dir: /app
-    command: bash -c 'npm start && npm run build'
+    #command: bash -c 'npm start && npm run build'
     networks:
       - backend
     depends_on:
