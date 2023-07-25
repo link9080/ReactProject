@@ -32,8 +32,6 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp(props) {
-  const [loadingflg, setloadingflg] = React.useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setloadingflg(true)
@@ -76,8 +74,6 @@ export default function SignUp(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      {loadingflg ? (<loading />) : (null)}
-      <loading />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
