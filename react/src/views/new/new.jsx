@@ -34,7 +34,6 @@ const defaultTheme = createTheme();
 export default function SignUp(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    setloadingflg(true)
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
@@ -64,7 +63,6 @@ export default function SignUp(props) {
     axios.post('/api/new', params)
         .then(function (res) {
             console.log(res)
-            setloadingflg(false)
             props.setIsOpen(false);
         })
         .catch(function (error) {

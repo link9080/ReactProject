@@ -29,6 +29,7 @@ services:
       - TZ=${TZ}
       - CHOKIDAR_USEPOLLING=true
     tty: true
+    
     ports:
       - '3000:3000'
     volumes:
